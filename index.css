@@ -1,0 +1,23 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 34.375rem;
+  background-color: grey;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.color-container {
+  width: 80px;
+  height: 50vh;
+}
