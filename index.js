@@ -1,4 +1,4 @@
-const getColorBtn = document.getElementById("get-color-btn");
+document.addEventListener("DOMContentLoaded", init);
 
 document.addEventListener("click", (e) => {
   if (e.target.dataset.colorText) {
@@ -8,7 +8,15 @@ document.addEventListener("click", (e) => {
   }
 });
 
-getColorBtn.addEventListener("click", () => {
+document.getElementById("get-color-btn").addEventListener("click", () => {
+  fetchColorScheme();
+});
+
+function init() {
+  fetchColorScheme();
+}
+
+function fetchColorScheme() {
   const colorPicker = document
     .getElementById("color-picker")
     .value.substring(1);
@@ -19,7 +27,7 @@ getColorBtn.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((data) => renderColorScheme(data));
-});
+}
 
 function renderColorScheme(colorData) {
   let colorHtml = "";
