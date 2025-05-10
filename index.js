@@ -17,8 +17,10 @@ function renderColorScheme(colorData) {
   let colorHtml = "";
   colorData.colors.forEach((color) => {
     colorHtml += `
-        <div class="color-container" style="background-color: ${color.hex.value}"></div>
-        <p>${color.hex.value}</p>
+        <div class="color-container">
+          <div class="color" style="background-color: ${color.hex.value}"></div>
+          <p class="color-text">${color.hex.value}</p>
+        </div>
     `;
   });
   document.querySelector("main").innerHTML = colorHtml;
